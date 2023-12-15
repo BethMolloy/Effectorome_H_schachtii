@@ -31,7 +31,11 @@ CentOS Linux 7
 --stop-at-score 100 \
 --zip \
 path/to/msas/1 \
-path/to/out ```
+path/to/out
+```
+
+
+
 
 
 
