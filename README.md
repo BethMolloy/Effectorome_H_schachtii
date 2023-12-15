@@ -45,10 +45,11 @@ path/to/out
 ```
 
 ### pLDDT score and pTM analyses
------!!! add this script later ----!!!!
+**-----!!! add this script later ----!!!!**
+
 
 ### ESMFold
-Utilise: https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/ESMFold.ipynb with default settings
+Use: https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/ESMFold.ipynb with default settings
 
 ### Foldseek
 1: Make database
