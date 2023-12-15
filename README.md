@@ -46,7 +46,7 @@ path/to/out
 
 ### pLDDT score and pTM analyses
 
-$${\color{!!! add this script later !!!}Red}$$
+$${\color{red}!!! add this script later !!!}$$
 
 
 
