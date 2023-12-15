@@ -18,7 +18,8 @@ CentOS Linux 7
 
 ## Prediction pipeline
 
-
+### ColabFold
+  colabfold_search in.fasata /path/to/ColabFold/DataBase /path/to/out/dir/msas -s 6 --threads 64 --db-load-mode 1
 
 
 
