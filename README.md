@@ -38,6 +38,12 @@ path/to/msas/1 \
 path/to/out
 ```
 
+```
+python ProteinFolding/script.py
+
+```
+
+
 
 
 
