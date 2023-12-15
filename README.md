@@ -45,7 +45,9 @@ path/to/out
 ```
 
 ### pLDDT score and pTM analyses
-**-----!!! add this script later ----!!!!**
+![#f03c15]**-----!!! add this script later ----!!!!**`#f03c15`
+
+
 
 
 ### ESMFold
