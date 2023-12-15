@@ -45,9 +45,8 @@ path/to/out
 ```
 
 ### pLDDT score and pTM analyses
-```diff
-- !!! add this script later !!!
-```
+
+$${\color{!!! add this script later !!!}Red}$$
 
 
 
