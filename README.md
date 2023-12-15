@@ -45,7 +45,7 @@ path/to/out
 ```
 
 ### pLDDT score and pTM analyses
-- ![#f03c15]-----!!! add this script later ----!!!!`#f03c15`
+- ![#f03c15](-----!!! add this script later ----!!!!)`#f03c15`
 
 
 
