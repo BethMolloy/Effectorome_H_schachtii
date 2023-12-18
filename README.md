@@ -50,9 +50,11 @@ path/to/out
 
 ### pLDDT score and pTM analyses
 
-$${\color{red}!!! add this script later !!! ---------------------------------------------------------------------------------------------------------------------------------------------------------------------}$$
+Adjust settings like work directory and score strictness in ProteinFolding/AnalyseMTEandpLDDT.py. Then run:
 
-
+```
+python3 ProteinFolding/AnalyseMTEandpLDDT.py
+```
 
 
 ### ESMFold
