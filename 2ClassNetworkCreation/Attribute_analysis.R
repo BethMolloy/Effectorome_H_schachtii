@@ -18,7 +18,7 @@ library(svglite)
 #This code works for any binary plant attribute, not just GO_slim terms
 
 #Take all the edges in the network, rename the columns appropriately and drop weights which are not needed
-#Takes the kind of coefficient file outputted by "2 class network creator updated"
+#Takes the kind of coefficient file outputted by "2_class_network_creator.R"
 edges <- read.table("Output_files/output_coefficient_file_RBS_0.975.txt", sep = "\t", header = FALSE, quote = "", dec=".")  %>% 
   rename("Plant_genes"=V1,"Nematode_genes"=V2) %>% select(-V3)
 
