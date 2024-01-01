@@ -1,4 +1,4 @@
-#IMPORTANT: Use only after "working with GO slim data.R" (you might want to combine these?)
+#IMPORTANT: Use only after "GO_slim_attribute_applier_1.R"
 #Code for adding the discrete presense or absense of a GO_slim term as an attribute
 
 slim_term <- "flower development"  #Input your GO_slim term
