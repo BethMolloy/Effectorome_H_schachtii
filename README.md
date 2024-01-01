@@ -72,7 +72,7 @@ db=/path/to/db/out/folder
 cd /path/to/desired/result/folder
 foldseek easy-search $db $db aln tmp --format-output query,target,fident,alnlen,mismatch,gapopen,qstart,qend,tstart,tend,evalue,bits,lddt,prob,pident,alntmscore,qtmscore,ttmscore,u
 ```
-# 2 Class network creation and analysis
+# 2-Class network creation and analysis
 
 ## Programs used
 R 4.2.2
