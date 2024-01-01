@@ -1,11 +1,8 @@
-#Use before GO_slim_attribute_applier
+#This code should take a csv file containing a long list of genes with corresponding GO terms and GO slim terms, and output a csv file containing only the subset of those genes annotated with a particular term of interest
 
 slim_term <- "example GO term" #Input your GO slim term
 
-
 #Take in a csv file containing loci, their corresponding GO terms, and the GO slims assosciated with each
-#This table is also included with these files, but contains ONLY THE GENES ACTUALLY IN THE NETWORK
-#So will produce incorrect or invalid results if new plant genes are added to the dataset, or if the threshold is tweaked
 
 GOs <- read.csv("../raw_data/All_plant_GO_terms_0.975_csv.csv", header=TRUE) %>% 
   rename(GO_slim= GO.Slim.s.) %>% select(Locus,GO.term,GO.ID,category,GO_slim)  
