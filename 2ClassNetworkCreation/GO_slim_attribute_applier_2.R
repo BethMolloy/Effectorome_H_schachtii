@@ -1,7 +1,6 @@
-#IMPORTANT: Use only after "GO_slim_attribute_applier_1.R"
 #Code for adding the discrete presense or absense of a GO_slim term as an attribute
 
-slim_term <- "flower development"  #Input your GO_slim term
+slim_term <- "example GO term"  #Input your GO_slim term in plaintext 
 slim_term <- gsub(" ","_",slim_term)
 
 annotation <- read.csv(paste0("../GO_data/GO_slim/",slim_term,".csv"), header=TRUE) %>% rename(Gene_ID=x) #Automatically read the file outputed for this GO_slim by the previous program
