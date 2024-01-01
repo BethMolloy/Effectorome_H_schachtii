@@ -76,6 +76,7 @@ foldseek easy-search $db $db aln tmp --format-output query,target,fident,alnlen,
 
 ## Programs used
 R 4.2.2
+
 Gephi 0.10
 
 ## OS
