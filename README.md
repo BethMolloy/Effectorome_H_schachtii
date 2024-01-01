@@ -7,7 +7,7 @@
 
 # Protein Folding
 
-## Pograms used
+## Programs used
 ColabFold v1.5.2 (AlphaFold v2.3.1)
 
 FoldSeek (8-ef4e960)
@@ -72,7 +72,16 @@ db=/path/to/db/out/folder
 cd /path/to/desired/result/folder
 foldseek easy-search $db $db aln tmp --format-output query,target,fident,alnlen,mismatch,gapopen,qstart,qend,tstart,tend,evalue,bits,lddt,prob,pident,alntmscore,qtmscore,ttmscore,u
 ```
+# 2 Class network creation and analysis
 
+## Programs used
+R 4.2.2
+Gephi 0.10
+
+## OS
+Windows 11
+
+## Workflow
 
 
 
