@@ -3,10 +3,8 @@ library(BiocGenerics)
 library(svglite)
 
 #---IMPORTANT---
-#It's not a good way to code but currently you need to manually change the last 2 lines depending on your data
+#Currently you need to manually change the last 2 lines depending on your data
 #---------------
-
-#Before using you can find and replace "rbs_stress_degrees" with "degrees" to make things a little more simple
 
 #This code takes in all the edges in a network, as well as the attributes of the genes involved
 #It calculates the actual number of edges between each discrete class of both groups of genes (e.g cluster and presense/absense of a GO_slim)
