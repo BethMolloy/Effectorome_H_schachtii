@@ -112,7 +112,11 @@ Z-Scale: 100
 
 Alfa: 80
 
+### Adding GO Slim attributes
+The list of GO terms and GO slim terms assosciated with plant genes in the network was downloaded from TAIR, and the subset of genes with assosciated terms of interest identified by GO_Slim_attribute_applier_1.R. Presence or absence in this subset was then applied to the data as a binary attribute by GO_Slim_attribute_applier_2.R. 
 
+### Analysis of stress or defence genes
+Bootstrapping to analyse an over or underabundance of edges between effector superclusters and genes involved in immunity or defense was done using Attribute_analysis.R. 
 
 
 
