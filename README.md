@@ -83,10 +83,34 @@ Gephi 0.10
 Windows 11
 
 ## Workflow
+### Network creation
+Requires 2 files, containing the expression data across all time points of the genes to be considered in both gene classes
 
+Load these files into 2_class_network_creator.R, then run 2_class_gexf_creator on the output
 
+This will create a gexf file containing a visualisation of the network that can be opened in Gephi. To create the visualisations seen in the paper, the layout applied was first Fruchterman Reingold with an area of 100,000, followed by Network Splitter 3d (https://gephi.org/plugins/#/plugin/network-splitter-3d). 
 
+For the effector-TF network, [z] was set equal to the degree of the node for TFs, and to 0 for effectors. 
+The paramaters applied were then:
 
+Z-Maximum Level: 50 (equal to the largest [z] in the network)
+
+Z-Distance Factor: 10
+
+Z-Scale: 100
+
+Alfa: 80
+
+For all effector-plant network visualisations, [z] was set to 80 for all effectors, and to 0 for all plant genes. 
+The parameters applied were then:
+
+Z-Maximum Level: 80
+
+Z-Distance Factor: 10
+
+Z-Scale: 100
+
+Alfa: 80
 
 
 
