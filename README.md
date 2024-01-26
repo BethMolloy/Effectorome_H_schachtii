@@ -72,6 +72,25 @@ db=/path/to/db/out/folder
 cd /path/to/desired/result/folder
 foldseek easy-search $db $db aln tmp --format-output query,target,fident,alnlen,mismatch,gapopen,qstart,qend,tstart,tend,evalue,bits,lddt,prob,pident,alntmscore,qtmscore,ttmscore,u
 ```
+
+# 1-Class network creation
+
+## Programmes Used
+R 4.2.1
+
+Gephi 0.10.1
+
+## OS
+MacOS Ventura
+
+## Workflow
+### Network creation
+Requires 1 file, containing the expression data for all time points of the genes to be considered and the associated attributes to be visualised on the network.
+
+Load this file into final_with_negpos.R, then run make_array_into_gexf.R with the output. To improve computation speeds for larger datasets, final_with_negpos_partition.R can be applied instead of final_with_negpos.R, followed by compiler.R, before running make_array_into_gexf.R. 
+
+This will create a gexf file containing a visualisation of the network that can be opened in Gephi. To create the visualisations seen in the paper, the layout applied was first Force Atlas, followed by Fruchterman Reingold with an area of 10,000.
+
 # 2-Class network creation and analysis
 
 ## Programs used
@@ -117,6 +136,7 @@ The list of GO terms and GO slim terms assosciated with plant genes in the netwo
 
 ### Analysis of stress or defence genes
 Bootstrapping to analyse an over or underabundance of edges between effector superclusters and genes involved in immunity or defense was done using Attribute_analysis.R. 
+
 
 
 
