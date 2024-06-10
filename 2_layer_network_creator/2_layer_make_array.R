@@ -17,11 +17,11 @@ library(tidyverse)
 
 #TAKE A .csv FILE CONTAINING ALL GENES OF THE "MAJOR" TYPE I.E. INPUT 1 (These will share edges between one another)
 
-Input_1_wide <- read.csv("putative_effectors.csv", stringsAsFactors = FALSE)
+Input_1_wide <- read.csv("putative_effectors_for_plant_immune_attribute.csv", stringsAsFactors = FALSE)
 
 #TAKE A .csv FILE CONTAINING ALL GENES OF THE "MINOR" TYPE I.E. INPUT 2 (These will only share edges with genes of the major type) 
 
-Input_2_wide <- read.csv("plant_genes_immune_attribute.csv", stringsAsFactors = FALSE)
+Input_2_wide <- read.csv("plant_genes_for_plant_immune_attribute.csv", stringsAsFactors = FALSE)
 
 #SPECIFY THE ATTRIBUTE THAT EACH GENE TYPE WILL BE COLOURED BY
 
