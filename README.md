@@ -1,18 +1,11 @@
 # Intro
 
-
-
-
-
-
 # Protein Folding
 
 ## Programs used
 ColabFold v1.5.2 (AlphaFold v2.3.1)
 
 FoldSeek (8-ef4e960)
-
-ESMfold v1.0.3
 
 Python 3.11
 
@@ -57,9 +50,6 @@ python3 ProteinFolding/AnalyseMTEandpLDDT.py
 ```
 
 
-### ESMFold
-Use: https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/ESMFold.ipynb with default settings
-
 ### Foldseek
 1: Make database
 ```
@@ -85,11 +75,11 @@ MacOS Ventura
 
 ## Workflow
 ### Network creation
-Requires 1 file, containing the expression data for all time points of the genes to be considered and the associated attributes to be visualised on the network.
+1_layer_make_array.R requires 1 input file, containing the expression data for all timepoints of each gene, and the associated attributes to be visualised on the network.
 
-Load this file into final_with_negpos.R, then run make_array_into_gexf.R with the output. To improve computation speeds for larger datasets, final_with_negpos_partition.R can be applied instead of final_with_negpos.R, followed by compiler.R, before running make_array_into_gexf.R. 
+1_layer_make_array_into_gexf.R accepts the output files of make_array.R and creates a Gephi compatible gexf file for visualising the network.
 
-This will create a gexf file containing a visualisation of the network that can be opened in Gephi. To create the visualisations seen in the paper, the layout applied was first Force Atlas, followed by Fruchterman Reingold with an area of 10,000.
+To create the visualisations seen in the paper, first apply Force Atlas, followed by Fruchterman Reingold (area of 10,000).
 
 # 2-Class network creation and analysis
 
@@ -103,16 +93,18 @@ Windows 11
 
 ## Workflow
 ### Network creation
-Requires 2 files, containing the expression data across all time points of the genes to be considered in both gene classes
 
-Load these files into 2_class_network_creator.R, then run 2_class_gexf_creator on the output
+2_layer_make_array.R requires 2 input files, containing the expression data for all timepoints of each gene, and the associated attributes to be visualised on the network, for genes in two distinct classes (i.e. nematode TFs and effectors).
 
-This will create a gexf file containing a visualisation of the network that can be opened in Gephi. To create the visualisations seen in the paper, the layout applied was first Fruchterman Reingold with an area of 100,000, followed by Network Splitter 3d (https://gephi.org/plugins/#/plugin/network-splitter-3d). 
+2_layer_make_array_into_gexf.R accepts the output files of make_array.R and creates a Gephi compatible gexf file for visualising the network.
 
-For the effector-TF network, [z] was set equal to the degree of the node for TFs, and to 0 for effectors. 
+To create the visualisations seen in the paper, apply Fruchterman Reingold (area of 100,000), followed by Network Splitter 3d (https://gephi.org/plugins/#/plugin/network-splitter-3d). 
+
+For the effector-TF network, [z] was set equal to the degree of the node for TFs, and to 0 for effectors.
+
 The paramaters applied were then:
 
-Z-Maximum Level: 50 (equal to the largest [z] in the network)
+Z-Maximum Level: equal to the largest [z] in the network
 
 Z-Distance Factor: 10
 
@@ -120,7 +112,8 @@ Z-Scale: 100
 
 Alfa: 80
 
-For all effector-plant network visualisations, [z] was set to 80 for all effectors, and to 0 for all plant genes. 
+For all effector-plant network [z] was set to 80 for all effectors, and to 0 for all plant genes.
+
 The parameters applied were then:
 
 Z-Maximum Level: 80
@@ -132,11 +125,7 @@ Z-Scale: 100
 Alfa: 80
 
 ### Adding GO Slim attributes
-The list of GO terms and GO slim terms assosciated with plant genes in the network was downloaded from TAIR, and the subset of genes with assosciated terms of interest identified by GO_Slim_attribute_applier_1.R. Presence or absence in this subset was then applied to the data as a binary attribute by GO_Slim_attribute_applier_2.R. 
+The list of GO terms and GO slim terms assosciated with plant genes in the network was downloaded from TAIR bulk GO annotation search, functional categorisation and download tool (https://v2.arabidopsis.org/tools/bulk/go/). This was inputted into GO_Slim_attribute_applier_1.R, which outputs a list of genes associated with a particular term. Presence or absence of these terms in the list of genes of interest (i.e. plant genes in the network) was then added to the data as a binary attribute using GO_Slim_attribute_applier_2.R. 
 
 ### Analysis of stress or defence genes
-Bootstrapping to analyse an over or underabundance of edges between effector superclusters and genes involved in immunity or defense was done using Attribute_analysis.R. 
-
-
-
-
+Bootstrapping to identify enrichment or depletion of gene sets (i.e. immune/defence-related genes) in each supercluster (as defined by Siddique et al. 2022) was done using Attribute_analysis.R. 
